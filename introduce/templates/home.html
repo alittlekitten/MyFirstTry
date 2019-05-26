@@ -1,0 +1,210 @@
+<html lang="en"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <title>Carousel Template · Bootstrap</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+    
+        <!-- Bootstrap core CSS -->
+    <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </head>
+      <body>
+        <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Likelion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">메인페이지<span class="sr-only">현재</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">개발자이력</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">협력사</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    {% load staticfiles %}
+    <main role="main">
+    
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <rect width="100%" height="100%" fill="#777"><img src="{% static 'ot.jpg' %}"></rect>
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h2>멋쟁이 사자처럼 7기 오석호 입니다!</h2>
+                <p>본 페이지를 통해서 이 학생에 대해 간략하게 알아가실 수 있습니다!</p>
+                <p><a class="btn btn-lg btn-info" href="#my" role="button">이력 요약</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+                <rect width="100%" height="100%" fill="#777"><img src="{% static 'class.jpg' %}"></rect>
+            <div class="container">
+              <div class="carousel-caption">
+                <h3>왜 하필 멋쟁이 사자처럼에?</h3>
+                <p>멋사 3수생의 썰을 들어보고 싶다면?</p>
+                <p><a class="btn btn-lg btn-warning" href="#why" role="button">더 보러 가기</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+                <rect width="100%" height="100%" fill="#777"><img src="{% static 'compu.jpg' %}"></rect>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h3>그렇다면 이걸 배워서 어디다 써먹게?</h3>
+                <p>컴퓨터를 좋아하고 무언가를 만들어보고 싶지만 쉽사리 시작하지 못하는 이유!</p>
+                <p><a class="btn btn-lg btn-dark" href="#how" role="button">더 보러 가기</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+
+      <br>
+      <br>
+      <div class="container marketing">
+    
+        
+    
+    
+        <!-- START THE FEATURETTES -->
+    
+        <a id="my"><hr class="featurette-divider"></a>
+    
+        <div class="row featurette">
+            <div class="col-md-7">
+            <h2 class="featurette-heading">나는 누구인가?</h2>
+            <p class="lead">
+                <ul>
+                    <li>경희대학교 경제학과 15학번 오석호</li>
+                    <li>경희대학교 서울캠퍼스 경제학과 3학년에 재학중</li>
+                    <li>경희대학교 국제캠퍼스 컴퓨터공학과 수업 2학기째 수강중</li>
+                    <li>하지만 지금도 컴퓨터로 할 줄 아는 건 인터넷과 게임뿐</li>
+                    <li>그 흔한 컴활자격증조차 아직 취득하지 못함</li>
+                    <li>취미는 스포츠, 음악, 컴퓨터, 게임, 영상편집 등 다양하지만</li>
+                    <li>아쉽게도 그 놈들을 잘 잇지 못함 </li>
+                    <li>그래도 이 멍청이와 함께하고 싶은 마음이 있다면</li>
+                    <li>github : alittlekitten</li>
+                    <li>카카오톡 : solarbeeam</li>
+                    <li>인스타그램 : ssoconut</li>
+                    <li>위 연락처로 마음껏 연락을 남겨주시길!</li>
+                </ul>
+                </p>
+          </div>
+          <div class="col-md-5">
+             <rect width="100%" height="100%" fill="#eee"><img src="{% static 'ma.jpg' %}" width="300" height="350"></rect>
+          </div>
+        </div>
+        
+        <hr class="featurette-divider">
+        <a id="why"></a>
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">왜 멋사에 그렇게 들어오고 싶었냐고? </h2>
+            <p> 입학하고 얼마 되지 않아 고등학교 친구로부터 "혹시 컴퓨터 좋아하면 이런거 있으니까 한번 지원해봐~"라는 이야기를 듣고 멋사 3기에 지원하였다. </p>
+            <p> 나름 지원 조건에 맞추어서 ppt도 만들고 아이디어도 짜내서 제출했으나 가볍게 광탈.</p>
+            <p> 그 이후로 우연한 기회로 멋사 2기, 3기 형 누나들이 운영하는 프로그래밍동아리 'Codrug'에 합격하여 루비라는 프로그래밍 언어를 배우게 됨.</p>
+            <p> 선배들이 만든 '직박구리', '킴비서' 등등 홈페이지 또는 앱들을 보니 참 신기하면서 나도 저런거 만들어보고 싶었다.</p>
+            <p> 그 당시 코딩이 꽤 재미있었는데 어쩌다보니 가고싶었던 군대 지원 체력시험과 필기시험과 면접에 통과하여 소방서에서 군복무를 할 수 있는 기회를 얻게 되어 부득이하게 동아리 생활 6개월만에 입대를 하게 됨.</p>
+            <p> 군대를 다녀온 이후 코딩을 다시 배워보고자 멋사 6기에 지원하였으나 면접에서 또다시 광탈.</p>
+            <p> 나와 멋사는 인연이 아닌가보다 싶어서 사실상 포기모드. 그러던 중 컴공 복전하는 한 친구를 다른 교양 수업에서 만나 용기를 얻어 2학년 2학기부터 국제캠퍼스 컴공수업을 듣기 시작함.</p>
+            <p> 그렇게 3학년이 되고 나서 저번학기에 멋사를 지원할까 말까 고민하던 비전공자 이과대 친구의 꼬드김에 넘어가 난 또 떨어지겠지 하며 별 기대 안하고 같이 지원했다가 덜컥 붙어버림..</p>
+            <p> 이왕 붙은거 열심히 하고자 마음을 먹었지만 잘하는 친구들 속에서 시무룩하며 열심히 따라가는 중!</p>
+            <p> 근데 이게 왜 멋사에 들어오고 싶었는지 이유냐고? 사실 의식의 흐름에 따라 적은거라 내용이 산으로 가긴 했다.</p>
+            <p> 그래도 좀 더 질문에 맞게 답변을 하자면, TV에 나온 이두희형님이 멋있었고, 동아리 형누나들이 멋있었고, 멋사분들이 공부하는게 멋있었고, 컴퓨터가 좋았다. 단지 그게 끝이다 ^^</p>
+            <p> 3번 지원하면서 실망감, 패배감도 많이 느꼈지만, 같이 공부하는 멋진 경희대 7기 친구들을 보면서 나도 저렇게 멋진 사람이 되고싶다는 희망을 가지며 지금도 과제중이다 ㅋㅋㅋㅋ</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+        <a id="how"></a>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">이거 배워서 어디다 써먹을래?</h2>
+            <p>좋아하는 스포츠와 접목하여 데이터 분석하는 사이트도 만들어 보고 싶고,</p>
+            <p>진짜 개발자가 되어 웹페이지를 분석하고 오류를 수정도 해 보고 싶고,</p>
+            <p>C#, 유니티 등 다른 언어를 배워 앱개발이나 운영체제도 만들어보고 싶고,</p>
+            <p>우선 다 배워놓으면 어디엔가는 쓸 데가 있다고 생각한다!</p>
+            <p>지금 당장은 웹페이지 구현도 겨우겨우 하고있지만, 올해 말쯤 되면 많은 것들을 만들고 있지 않을까!!</p>
+            <p>두려워하지 말고, 하나하나 차근차근 하다보면 생각보다 수월하게 할 수 있는게 코딩이라고 생각한다!</p>
+            <p>다시 말한다!! 나도 그랬고, 여러분도 그럴 지도 모른다. 생각보다는 쉬울테니까 겁먹지 말자!!</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+      </div><!-- /.container -->
+    
+    
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">맨 위로</a></p>
+        <p>© 2019 Likelion Company, Inc. </p>
+      </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+    </body></html>
